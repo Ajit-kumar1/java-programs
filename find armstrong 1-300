@@ -1,0 +1,34 @@
+import java.util.Scanner;
+import java.lang.Math;
+public class Hello
+{
+    public static void main(String args[])
+    {
+        //Scanner sc= new Scanner(System.in);
+        Double p,rev;
+        int org,a,rem;
+        for(a=1;a<=300;a++)
+        {
+            org=a;
+            p=0.0;
+         //   System.out.println("a "+a);
+            while(org>0)
+            {
+                org=org/10;
+                p++;
+            //     System.out.println("in loop power "+p);
+            }
+            org=a;
+            rev=0.0;
+          //  System.out.println("power "+p);
+            while(org>0)
+            {
+                rem=org%10;
+                rev=Math.pow(rem,p)+Double.valueOf(rev);
+                org=org/10;
+            }
+            if(rev==a)
+            System.out.println("Armstrong "+rev);
+        }
+    }
+}
